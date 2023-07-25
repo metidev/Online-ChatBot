@@ -33,13 +33,23 @@
 <script src="https://kit.fontawesome.com/517442c859.js" crossorigin="anonymous"></script>
 
 <script>
-    $(document).ready(function() {
-        $("#send-btn").on("click", function(){
+    $(document).ready(function () {
+        $("#send-btn").on("click", function () {
             $value = $("#data").val();
-            $msg = '<div class="user-inbox inbox"> <div class="msg-header"><p>'+ $value +'</p></div></div>';
+            $msg = '<div class="user-inbox inbox"> <div class="msg-header"><p>' + $value + '</p></div></div>';
             $(".form").append($msg);
             $("#data").val('');
-            
+
+            $.ajax({
+                url: 'message.php',
+                type: 'POST',
+                data: 'text=' + $value,
+                success: function (result) {
+                    $replay = '<div class="bot-inbox inbox"> <div class="icon"><i class="fas fa-robot"></i> </div> <div class="msg-header"> <p>' + result + '</p> </div> </div>';
+                    $(".form").append($replay);
+                    $(".form").scrollTop($(".form")[0].scrollHeight);
+                }
+            })
         });
     });
 </script>
