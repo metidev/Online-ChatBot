@@ -10,13 +10,13 @@
 </head>
 <body>
 <div class="wrapper">
-    <div class="title">Online ChatBot</div>
+    <div class="title">ربات چت آنلاین</div>
     <div class="form">
         <div class="bot-inbox inbox">
             <div class="icon"><i class="fas fa-robot"></i>
             </div>
             <div class="msg-header">
-                <p>Hello there, how can I help you?</p>
+                <p>سلام چطور میتونم کمکتون کنم؟</p>
             </div>
         </div>
 
