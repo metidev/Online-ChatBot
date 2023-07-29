@@ -10,5 +10,5 @@ if (mysqli_num_rows($run_query) > 0) {
     $replay = $fetch_data['replies'];
     echo $replay;
 } else {
-    echo "Sorry can't be able understand your message.";
+    echo "با عرض پوزش نمی توانم پیام شما را درک کنم.";
 }
